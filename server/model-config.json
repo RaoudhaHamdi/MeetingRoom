@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "../node_modules/loopback-ds-timestamp-mixin",
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "mongodb",
+    "public": false,
+    "user": {
+      "type": "belongsTo",
+      "model": "Profil",
+      "foreignKey": "userId"
+    }
+  },
+  "ACL": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mongodb",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "Profil": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Event": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Part": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Notification": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Email": {
+    "dataSource": "Email",
+    "public": false
+  }
+}

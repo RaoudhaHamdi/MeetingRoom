@@ -1,0 +1,32 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongodb": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "demo",
+    "password": "",
+    "name": "mongodb",
+    "user": "",
+    "connector": "mongodb"
+  },
+  "Email": {
+    "name": "Email",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "SSL0.OVH.NET",
+        "secureConnection": true,
+        "port": 587,
+        "auth": {
+          "user": "r.hamdi@mintit.io",
+          "pass": "CZfstZBN3cpNSi1NAg0N"
+        }
+      }
+    ]
+  }
+}
