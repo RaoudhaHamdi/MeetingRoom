@@ -23,8 +23,8 @@
         "secureConnection": true,
         "port": 587,
         "auth": {
-          "user": "r.hamdi@mintit.io",
-          "pass": "CZfstZBN3cpNSi1NAg0N"
+          "user": "",
+          "pass": ""
         }
       }
     ]
